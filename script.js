@@ -84,11 +84,13 @@ var mass = 0;
 var quant = 0;
 var currentCluster = [];
 var pastClusters = [];
+var currentQuant = 0;
 
 
 function addRock() {
     mass = document.getElementById("mass").value;
     quant = document.getElementById("quant").value;
+
 
     var rock = {
         rockMass: mass,
@@ -96,6 +98,7 @@ function addRock() {
         totalSCU: Math.round(((parseFloat(mass) / 50) * (parseFloat(quant) / 100)) * 100) / 100
     };
 
+    currentQuant += rock.totalSCU;
     currentCluster.push(rock);
 
     for (var i = 0; i < currentCluster.length; i++) {
@@ -115,7 +118,12 @@ function addRock() {
         para.appendChild(button);
 
     }
+    var paraquant = document.createElement("p");
+    var nodequant = document.createTextNode(currentQuant);
 
+    paraquant.appendChild(nodequant);
+
+    document.getElementById("currentClusterQuant").innerHTML = "Total Quant: " + currentQuant;
     document.getElementById("currentCluster").appendChild(para);
 }
 
