@@ -149,7 +149,7 @@ function finishCluster() {
     para.appendChild(document.createElement("br"));
     document.getElementById("pastClusters").appendChild(para);
 
-
+    currentQuant = 0;
     currentCluster = [];
 
 }
