@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="./index.html">Rock Calculations</a></h1>
+
+    <form>
+        <label for="mass">Mass</label>
+        <input type="text" id="mass" name="mass"><br>
+        <label for="quant">Percent Quant</label>
+        <input type="text" id="quant" name="quant"><br>
+
+        <button type="button" onclick="addRock()">submit</button>
+    </form>
+
+    <div id="currentCluster"></div>
+    <button type="button" onclick="finishCluster()">Finish Cluster</button>
+    <div id="pastClusters"></div>
+    
+</body>
+</html>

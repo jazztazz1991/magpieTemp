@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Magpie Industries Temp Site</title>
+</head>
+<body>
+    <h1><a href="./index.html">Treasury</a></h1>
+
+    <form onsubmit="addTreasuryItem()">
+        <input list="personellDL" id="personell">
+        <datalist id="personellDL">
+            <option value="Lanugginoso">
+            <option value="Percival Binglebottom">
+            <option value="Juwicaro">
+            <option value="AlderThePlant">
+            <option value="RolandMcCoy">
+        </datalist><br>
+        <label for="credit">Credit</label>
+        <input type="text" id="credit" name="credit"><br>
+        <label for="debit">Debit</label>
+        <input type="text" id="debit" name="debit"><br>
+        <label for="refinery">Owed to Refinery</label>
+        <input type="text" id="refinery" name="refinery"><br>
+        <label for="donation">Donation</label>
+        <input type="text" id="donation" name="donation"><br><br>
+
+        <button type="button" onclick="addTreasuryItem()">submit</button>
+    </form>
+
+
+    <br>
+    <br>
+    <p>Credit:             $<span id="totalCredit">0</span></p>
+    <p>Debit:              $<span id="totalDebit">0</span></p>
+    <p>Owed From Refinery: $<span id="totalOwed">0</span></p>
+    <p>Donations:          $<span id="totalDonation">0</span></p>
+    <p>Current Balance:    $<span id="totalBalance">0</span></p>
+    <br>
+    <br>
+    <div id="treasuryinputs"></div>
+</body>
+</html>
